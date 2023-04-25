@@ -32,7 +32,7 @@ python Transcriptclean.py
 ### file transformation [4]
 tools: #samtools, #bedtools
 ```command
-samtools view -b -f 0 | samtools -@ 10 | bedtools bamtobed -split > out.bed
+samtools view -b -f 0 | samtools sort -@ 10 | bedtools bamtobed -split > out.bed
 ```
 ### Read to fasta by bed file [5]
 tools: biotools-master #bedTobed12, #bedtools
